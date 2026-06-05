@@ -1,0 +1,176 @@
+/* ESTILOS ESPECÍFICOS: SERVICIOS */
+.page-content { padding: 120px 20px 60px 20px; }
+.container { max-width: 1000px; margin: 0 auto; }
+.page-header { text-align: center; margin-bottom: 40px; }
+.page-title { color: var(--primary); font-size: 2.5rem; margin-bottom: 10px; }
+.page-desc { color: var(--text-light); max-width: 700px; margin: 0 auto; line-height: 1.6;}
+.divider { width: 60px; height: 3px; background-color: var(--accent); margin: 20px auto; }
+
+/* Botones de Filtrado */
+.filters-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 2px solid var(--accent);
+    color: var(--text-dark);
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: var(--accent);
+    color: var(--white);
+    box-shadow: 0 4px 10px rgba(184, 146, 68, 0.3);
+}
+
+/* Grid de Tarjetas de Servicio */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 70px;
+    min-height: 300px; /* Evita que el contenedor colapse al filtrar */
+}
+
+.service-card {
+    background-color: var(--white);
+    padding: 40px 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    border-color: rgba(184, 146, 68, 0.4);
+}
+
+.service-card i {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover i {
+    transform: scale(1.1);
+}
+
+.service-card h3 {
+    color: var(--primary);
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Animación para el filtrado */
+.fade-in {
+    animation: fadeInScale 0.4s ease forwards;
+}
+
+@keyframes fadeInScale {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Ocultar elementos filtrados suavemente */
+.hidden {
+    display: none !important;
+}
+
+/* Sección Políticas (Acordeón) */
+.policies-section {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    padding: 50px 40px;
+    border-radius: 12px;
+    color: var(--white);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.policies-section h2 {
+    text-align: center;
+    color: var(--accent);
+    font-size: 2rem;
+}
+
+.accordion-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion-header {
+    width: 100%;
+    text-align: left;
+    padding: 18px 25px;
+    background-color: rgba(255,255,255,0.05);
+    color: var(--white);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.accordion-header i {
+    color: var(--accent);
+    transition: transform 0.3s ease;
+}
+
+.accordion-header:hover, .accordion-header.active {
+    background-color: rgba(255,255,255,0.1);
+    border-color: var(--accent);
+}
+
+.accordion-header.active i {
+    transform: rotate(180deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    background-color: rgba(0,0,0,0.25);
+    border-radius: 0 0 6px 6px;
+}
+
+.accordion-content p {
+    padding: 25px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.85);
+    margin: 0;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .filters-container { flex-direction: column; align-items: center; }
+    .filter-btn { width: 80%; text-align: center; }
+    .policies-section { padding: 40px 20px; }
+}

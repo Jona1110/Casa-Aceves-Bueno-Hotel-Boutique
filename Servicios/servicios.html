@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios | Casa Aceves & Bueno</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="servicios.css">
+</head>
+<body>
+
+    <!-- NAVBAR GLOBAL -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-title">CASA ACEVES & BUENO</span>
+                <span class="logo-subtitle">HOTEL BOUTIQUE</span>
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="../index.html" class="nav-link">Inicio</a>
+                <a href="../Habitaciones/habitaciones.html" class="nav-link">Habitaciones</a>
+                <a href="servicios.html" class="nav-link active">Servicios</a>
+                <a href="../Nosotros/nosotros.html" class="nav-link">Nosotros</a>
+                <a href="../Contacto/contacto.html" class="nav-link">Contacto</a>
+            </nav>
+            <div class="hamburger" id="hamburgerMenu">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <div class="container">
+            <div class="page-header reveal">
+                <h1 class="page-title">Amenidades y Servicios</h1>
+                <p class="page-desc">Cada detalle en Casa Aceves & Bueno ha sido pensado para elevar tu experiencia, combinando la eficiencia que necesitas con el confort y la exclusividad que mereces.</p>
+                <div class="divider"></div>
+            </div>
+
+            <!-- SISTEMA DE FILTRADO -->
+            <div class="filters-container reveal">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="room">En Habitación</button>
+                <button class="filter-btn" data-filter="general">Generales</button>
+                <button class="filter-btn" data-filter="business">Negocios</button>
+            </div>
+
+            <!-- CATÁLOGO DE SERVICIOS -->
+            <div class="services-grid" id="servicesGrid">
+                
+                <div class="service-card" data-category="general business">
+                    <i class="fas fa-wifi"></i>
+                    <h3>Conectividad Total</h3>
+                    <p>Internet de fibra óptica de alta velocidad en habitaciones y áreas comunes, ideal para videollamadas, trabajo remoto y streaming sin interrupciones.</p>
+                </div>
+
+                <div class="service-card" data-category="general">
+                    <i class="fas fa-car"></i>
+                    <h3>Estacionamiento Privado</h3>
+                    <p>Área de estacionamiento seguro y exclusivo para nuestros huéspedes dentro de las instalaciones, sin costo adicional durante su estancia.</p>
+                </div>
+
+                <div class="service-card" data-category="room">
+                    <i class="fas fa-snowflake"></i>
+                    <h3>Climatización Individual</h3>
+                    <p>Sistemas de aire acondicionado silenciosos y controlados individualmente en cada suite, garantizando tu confort térmico ideal.</p>
+                </div>
+
+                <div class="service-card" data-category="business">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Espacios Ejecutivos</h3>
+                    <p>Áreas de co-working y espacios adaptados para que tus compromisos laborales o de negocios fluyan sin contratiempos.</p>
+                </div>
+
+                <div class="service-card" data-category="general">
+                    <i class="fas fa-coffee"></i>
+                    <h3>Snack Bar & Cafetería</h3>
+                    <p>Disfruta de bebidas calientes, refrescos y opciones ligeras en un ambiente relajado y sofisticado dentro del hotel.</p>
+                </div>
+
+                <div class="service-card" data-category="general">
+                    <i class="fas fa-concierge-bell"></i>
+                    <h3>Recepción y Asistencia</h3>
+                    <p>Servicio de recepción con personal enfocado en resolver todas tus necesidades de forma ágil, cálida y discreta.</p>
+                </div>
+
+                <div class="service-card" data-category="room">
+                    <i class="fas fa-tv"></i>
+                    <h3>Entretenimiento Smart</h3>
+                    <p>Pantallas planas de alta definición con acceso a canales por cable y conectividad para tus plataformas de streaming favoritas.</p>
+                </div>
+
+                <div class="service-card" data-category="general">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Seguridad 24/7</h3>
+                    <p>Sistema de circuito cerrado, detectores de humo y accesos controlados para garantizar tu máxima tranquilidad en todo momento.</p>
+                </div>
+
+                <div class="service-card" data-category="room">
+                    <i class="fas fa-broom"></i>
+                    <h3>Limpieza Diaria</h3>
+                    <p>Servicio de mucama con altos estándares de higiene, cambio de blancos y reposición de artículos de tocador gratuitos.</p>
+                </div>
+
+            </div>
+
+            <!-- SECCIÓN DE POLÍTICAS (ACORDEÓN) -->
+            <div class="policies-section reveal">
+                <h2>Políticas del Hotel</h2>
+                <p style="text-align: center; margin-bottom: 30px; color: rgba(255,255,255,0.8);">Conoce las normas que nos ayudan a mantener un ambiente armónico y exclusivo.</p>
+                
+                <div class="accordion-container">
+                    <div class="accordion-item">
+                        <button class="accordion-header">Horarios de Check-in y Check-out <i class="fas fa-plus"></i></button>
+                        <div class="accordion-content">
+                            <p><strong>Entrada (Check-in):</strong> A partir de las 3:00 p.m.<br>
+                            <strong>Salida (Check-out):</strong> A más tardar a las 11:00 a.m.<br><br>
+                            * Si requiere flexibilidad, resguardo de equipaje o un late check-out, consulte disponibilidad y posibles tarifas adicionales con nuestro equipo de recepción.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-header">Política de Mascotas <i class="fas fa-plus"></i></button>
+                        <div class="accordion-content">
+                            <p>Para garantizar el confort, la limpieza y evitar problemas de alergias entre nuestros huéspedes, <strong>no se permite el ingreso ni la estancia de animales o mascotas</strong> en ninguna de nuestras habitaciones ni áreas comunes.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">Política de Cancelación y Reservas <i class="fas fa-plus"></i></button>
+                        <div class="accordion-content">
+                            <p>Las reservas deben ser garantizadas con un método de pago válido. Las cancelaciones o modificaciones realizadas con al menos 48 horas de anticipación a la fecha de llegada no generarán cargos. Las cancelaciones tardías o "No Shows" incurrirán en el cobro de la primera noche de estancia.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">Política de Inclusión y Respeto <i class="fas fa-plus"></i></button>
+                        <div class="accordion-content">
+                            <p>Somos un espacio de respeto absoluto y libre de discriminación. Casa Aceves & Bueno es orgullosamente un establecimiento <strong>Amigable con LGBTQ+</strong>. Exigimos a nuestro personal y a nuestros huéspedes mantener un trato cordial y respetuoso en todo momento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER GLOBAL -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>CASA ACEVES & BUENO</h3>
+                <p class="footer-desc">Redefiniendo el concepto de hospedaje boutique en Jalisco.</p>
+                <div class="footer-badges">
+                    <span class="badge"><i class="fas fa-rainbow"></i> Amigable con LGBTQ+</span>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <h4>Ubicación y Contacto</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Plan de Guadalupe 60, Potrero Nuevo, 45680 El Salto, Jal.</p>
+                <p><i class="fas fa-phone-alt"></i> +52 33 5128 2650</p>
+                <p><i class="far fa-clock"></i> Check-in: 3:00 p.m. | Check-out: 11:00 a.m.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script src="servicios.js"></script>
+</body>
+</html>

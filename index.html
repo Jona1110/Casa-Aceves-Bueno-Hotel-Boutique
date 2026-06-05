@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Aceves & Bueno | Hotel Boutique</title>
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR GLOBAL -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <span class="logo-title">CASA ACEVES & BUENO</span>
+                <span class="logo-subtitle">HOTEL BOUTIQUE</span>
+            </a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link active">Inicio</a>
+                <a href="Habitaciones/habitaciones.html" class="nav-link">Habitaciones</a>
+                <a href="Servicios/servicios.html" class="nav-link">Servicios</a>
+                <a href="Nosotros/nosotros.html" class="nav-link">Nosotros</a>
+                <a href="Contacto/contacto.html" class="nav-link">Contacto</a>
+            </nav>
+            <div class="hamburger" id="hamburgerMenu">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION: Aquí pones la ruta de tu imagen dentro de url('') -->
+        <section class="hero" style="background-image: url('img/inicio1.jpeg');">
+            <!-- Esta capa oscura asegura que el texto se lea bien sobre cualquier foto -->
+            <div class="hero-overlay"></div> 
+            
+            <div class="hero-content">
+                <span class="hero-tag reveal">Confort Exclusivo en El Salto</span>
+                <h1 class="hero-title reveal">Un oasis de elegancia y descanso</h1>
+                <p class="hero-subtitle reveal">El equilibrio perfecto entre negocios y placer. Descubre una experiencia de alta gama diseñada para tu total comodidad.</p>
+                <div class="hero-actions reveal">
+                    <a href="Habitaciones/habitaciones.html" class="btn-primary btn-lg">Descubrir Suites</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Explorar</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- NUEVA SECCIÓN: BIENVENIDA -->
+        <section class="welcome-section section-padding">
+            <div class="container content-center reveal">
+                <h2 class="section-title">Bienvenido a la Exclusividad</h2>
+                <div class="divider"></div>
+                <p class="section-desc">Más que un hotel, somos tu refugio en Jalisco. Ubicados estratégicamente cerca del corredor industrial y el aeropuerto, ofrecemos un entorno de total tranquilidad y atención meticulosa al detalle para que tu única preocupación sea disfrutar tu estancia.</p>
+            </div>
+        </section>
+
+        <!-- NUEVA SECCIÓN: VISTAZO A HABITACIONES -->
+        <section class="featured-rooms section-padding bg-light">
+            <div class="container">
+                <div class="content-center reveal">
+                    <span class="section-subtitle">Tu Descanso</span>
+                    <h2 class="section-title">Nuestras Suites Destacadas</h2>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="grid-2-cols">
+                    <!-- Tarjeta 1 -->
+                    <div class="card-minimal reveal">
+                        <div class="card-icon"><i class="fas fa-bed"></i></div>
+                        <h3>Estándar Suite</h3>
+                        <p>Perfecta para el viajero de negocios. Confort absoluto en cama King Size y amenidades premium.</p>
+                        <a href="Habitaciones/habitaciones.html" class="link-arrow">Ver detalles <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <!-- Tarjeta 2 -->
+                    <div class="card-minimal reveal">
+                        <div class="card-icon"><i class="fas fa-users"></i></div>
+                        <h3>Superior Suite Doble</h3>
+                        <p>Espacio ideal para familias o grupos corporativos. Dos camas King Size y climatización perfecta.</p>
+                        <a href="Habitaciones/habitaciones.html" class="link-arrow">Ver detalles <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- NUEVA SECCIÓN: AMENIDADES RÁPIDAS -->
+        <section class="quick-amenities section-padding">
+            <div class="container">
+                <div class="amenities-row reveal">
+                    <div class="amenity-mini">
+                        <i class="fas fa-wifi"></i>
+                        <h4>Wi-Fi Alta Velocidad</h4>
+                    </div>
+                    <div class="amenity-mini">
+                        <i class="fas fa-parking"></i>
+                        <h4>Estacionamiento</h4>
+                    </div>
+                    <div class="amenity-mini">
+                        <i class="fas fa-snowflake"></i>
+                        <h4>A/C Sutil</h4>
+                    </div>
+                    <div class="amenity-mini">
+                        <i class="fas fa-coffee"></i>
+                        <h4>Cafetería</h4>
+                    </div>
+                </div>
+                <div class="text-center mt-40 reveal">
+                    <a href="Servicios/servicios.html" class="btn-outline">Conoce todos los servicios</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: MAPA DE UBICACIÓN -->
+<section class="map-section section-padding reveal">
+    <div class="container text-center">
+        <h2 class="section-title">Encuéntranos en El Salto</h2>
+        <div class="divider"></div>
+        <p class="section-desc" style="margin-bottom: 30px;">Estamos ubicados en una zona estratégica, facilitando tu acceso a las principales vías de Jalisco.</p>
+        
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2158.5975441416967!2d-103.18779167314655!3d20.51893648513152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842f4bde37b7d509%3A0x8da72c4c922b8db4!2sCasa%20Aceves%20%26%20Bueno%20Hotel%20Boutique!5e0!3m2!1ses-419!2smx!4v1780685934000!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                width="100%" 
+                height="450" 
+                style="border:0; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+       
+
+        <!-- NUEVA SECCIÓN: LLAMADO A LA ACCIÓN (CTA) -->
+        <section class="cta-section reveal">
+            <div class="cta-content">
+                <h2>¿Listo para vivir la experiencia?</h2>
+                <p>Asegura tu habitación hoy mismo. Nuestro equipo está listo para recibirte con la máxima calidez.</p>
+                <a href="Contacto/contacto.html" class="btn-primary btn-lg">Contactar Recepción</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER GLOBAL -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>CASA ACEVES & BUENO</h3>
+                <p class="footer-desc">Redefiniendo el concepto de hospedaje boutique en Jalisco.</p>
+                <div class="footer-badges">
+                    <span class="badge"><i class="fas fa-rainbow"></i> Amigable con LGBTQ+</span>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <h4>Ubicación y Contacto</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Plan de Guadalupe 60, Potrero Nuevo, 45680 El Salto, Jal.</p>
+                <p><i class="fas fa-phone-alt"></i> +52 33 5128 2650</p>
+                <p><i class="far fa-clock"></i> Check-in: 3:00 p.m. | Check-out: 11:00 a.m.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

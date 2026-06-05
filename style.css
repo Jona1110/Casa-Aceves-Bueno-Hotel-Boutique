@@ -1,0 +1,174 @@
+/* VARIABLES GLOBALES */
+:root {
+    --primary: #1c2d42;      
+    --primary-dark: #0f172a; 
+    --accent: #b89244;       
+    --text-dark: #2d3748;
+    --text-light: #718096;
+    --bg-light: #f8fafc;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, .logo-title { font-family: 'Playfair Display', serif; }
+
+/* UTILIDADES GENERALES */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.section-padding { padding: 80px 0; }
+.bg-light { background-color: var(--bg-light); }
+.text-center { text-align: center; }
+.mt-40 { margin-top: 40px; }
+
+.section-title { font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; }
+.section-subtitle { color: var(--accent); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; font-size: 0.85rem; display: block; margin-bottom: 10px; }
+.section-desc { color: var(--text-light); max-width: 700px; margin: 0 auto; font-size: 1.05rem; line-height: 1.8; }
+.divider { width: 60px; height: 3px; background-color: var(--accent); margin: 0 auto 25px auto; }
+.content-center { text-align: center; max-width: 800px; margin: 0 auto; }
+
+/* BOTONES */
+.btn-primary { background-color: var(--primary); color: var(--white); padding: 12px 28px; border: none; border-radius: 4px; text-decoration: none; font-weight: 600; transition: var(--transition); display: inline-block; cursor: pointer; }
+.btn-primary:hover { background-color: var(--accent); transform: translateY(-2px); }
+.btn-lg { padding: 15px 35px; font-size: 1.1rem; }
+
+.btn-outline { background-color: transparent; border: 2px solid var(--primary); color: var(--primary); padding: 12px 28px; border-radius: 4px; text-decoration: none; font-weight: 600; transition: var(--transition); display: inline-block; }
+.btn-outline:hover { background-color: var(--primary); color: var(--white); }
+
+.link-arrow { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 8px; transition: var(--transition); }
+.link-arrow:hover { color: var(--primary); gap: 12px; }
+
+/* NAVBAR */
+.navbar { position: fixed; top: 0; width: 100%; background-color: rgba(255, 255, 255, 0.98); box-shadow: 0 2px 15px rgba(0,0,0,0.05); z-index: 1000; }
+.navbar-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 15px 20px; }
+.logo { text-decoration: none; display: flex; flex-direction: column; }
+.logo-title { color: var(--primary); font-size: 1.2rem; font-weight: 700; }
+.logo-subtitle { color: var(--accent); font-size: 0.7rem; letter-spacing: 2px; }
+
+.nav-menu { display: flex; gap: 25px; }
+.nav-link { text-decoration: none; color: var(--text-dark); font-size: 0.9rem; font-weight: 500; padding-bottom: 5px; border-bottom: 2px solid transparent; transition: var(--transition); }
+.nav-link:hover, .nav-link.active { color: var(--accent); border-color: var(--accent); }
+
+/* HAMBURGER MENU */
+.hamburger { display: none; cursor: pointer; }
+.hamburger span { display: block; width: 25px; height: 3px; background-color: var(--primary); margin: 5px 0; transition: var(--transition); }
+
+/* HERO SECTION (Preparado para tu imagen) */
+.hero {
+    height: 100vh;
+    /* Fondo por defecto si la imagen no carga */
+    background-color: var(--primary-dark); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efecto parallax sutil */
+    display: flex; align-items: center; justify-content: center;
+    text-align: center; color: var(--white); padding: 0 20px; position: relative;
+}
+
+/* El overlay oscurece tu foto para que el texto resalte */
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.7), rgba(28, 45, 66, 0.8));
+    z-index: 1;
+}
+
+.hero-content { position: relative; z-index: 2; max-width: 800px; }
+.hero-tag { color: var(--accent); letter-spacing: 3px; text-transform: uppercase; font-size: 0.85rem; display: block; margin-bottom: 15px; }
+.hero-title { font-size: 3.5rem; margin-bottom: 20px; line-height: 1.2; }
+.hero-subtitle { font-size: 1.1rem; margin: 0 auto 35px auto; color: rgba(255,255,255,0.9); }
+.scroll-indicator { position: absolute; bottom: 30px; font-size: 0.85rem; color: rgba(255,255,255,0.8); z-index: 2; animation: bounce 2s infinite; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+
+/* SECCIÓN: VISTAZO A HABITACIONES */
+.grid-2-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 50px; }
+.card-minimal { background-color: var(--white); padding: 40px; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.02); transition: var(--transition); }
+.card-minimal:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.08); border-color: rgba(184, 146, 68, 0.2); }
+.card-icon { font-size: 2.5rem; color: var(--accent); margin-bottom: 20px; }
+.card-minimal h3 { color: var(--primary); font-size: 1.4rem; margin-bottom: 15px; }
+.card-minimal p { color: var(--text-light); margin-bottom: 25px; line-height: 1.6; }
+
+/* SECCIÓN: AMENIDADES RÁPIDAS */
+.amenities-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 40px; }
+.amenity-mini { text-align: center; width: 150px; }
+.amenity-mini i { font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; transition: var(--transition); }
+.amenity-mini:hover i { color: var(--accent); transform: scale(1.1); }
+.amenity-mini h4 { color: var(--text-dark); font-size: 0.95rem; font-weight: 600; }
+
+/* CTA FINAL */
+.cta-section { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); padding: 80px 20px; text-align: center; color: var(--white); margin-top: 40px; }
+.cta-content { max-width: 600px; margin: 0 auto; }
+.cta-content h2 { font-size: 2.2rem; margin-bottom: 15px; color: var(--white); }
+.cta-content p { color: rgba(255,255,255,0.8); margin-bottom: 30px; font-size: 1.05rem; }
+
+/* FOOTER */
+.footer { background-color: var(--primary); color: var(--white); padding: 60px 20px 40px 20px; }
+.footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+.footer-contact p { margin-bottom: 12px; font-size: 0.9rem; color: rgba(255,255,255,0.8); display: flex; align-items: center; gap: 10px; }
+.footer-contact i { color: var(--accent); }
+.badge { display: inline-block; background-color: rgba(255,255,255,0.1); padding: 6px 12px; border-radius: 4px; font-size: 0.8rem; margin-top: 15px; }
+.badge i { color: #ff79c6; margin-right: 5px; }
+
+/* ANIMACIONES */
+.reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
+/* RESPONSIVE MÓVIL */
+@media (max-width: 768px) {
+    .hamburger { display: block; }
+    .nav-menu { position: fixed; top: 65px; left: -100%; flex-direction: column; width: 100%; background-color: var(--white); padding: 30px 20px; box-shadow: 0 10px 10px rgba(0,0,0,0.05); }
+    .nav-menu.active { left: 0; }
+    .hero-title { font-size: 2.5rem; }
+    .grid-2-cols { grid-template-columns: 1fr; }
+    .section-padding { padding: 60px 0; }
+}
+
+/* SECCIÓN MAPA - ESTILO BOUTIQUE */
+.map-section {
+    padding: 80px 20px;
+    background-color: var(--white);
+}
+
+.map-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    /* Efecto de sombra elegante */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(184, 146, 68, 0.2);
+    /* Transición suave */
+    transition: var(--transition);
+}
+
+.map-container:hover {
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+/* Filtro estético para Google Maps */
+.map-container iframe {
+    filter: grayscale(30%) contrast(1.1) brightness(1.05);
+    transition: filter 0.5s ease;
+    display: block;
+}
+
+/* Al pasar el mouse, el mapa recupera su color original */
+.map-container:hover iframe {
+    filter: grayscale(0%) contrast(1) brightness(1);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .map-container {
+        border-radius: 8px;
+    }
+}

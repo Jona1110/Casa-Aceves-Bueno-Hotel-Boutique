@@ -1,0 +1,245 @@
+/* ESTILOS ESPECÍFICOS DE HABITACIONES */
+.page-content { padding: 120px 20px 60px 20px; }
+.container { max-width: 1100px; margin: 0 auto; }
+.page-header { text-align: center; margin-bottom: 50px; }
+.page-title { color: var(--primary); font-size: 2.5rem; margin-bottom: 10px; }
+.page-desc { color: var(--text-light); max-width: 600px; margin: 0 auto; line-height: 1.6;}
+.divider { width: 60px; height: 3px; background-color: var(--accent); margin: 20px auto; }
+
+/* Grid a 2 columnas para 12 habitaciones */
+.rooms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 35px;
+}
+
+.room-card {
+    display: flex;
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: var(--transition);
+}
+
+.room-card:hover {
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+}
+
+/* Área de Imagen de la Tarjeta (Galería Deslizable) */
+.room-visual {
+    width: 40%;
+    position: relative;
+    overflow: hidden;
+    min-height: 250px;
+    background-color: var(--primary);
+}
+
+.gallery-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; 
+}
+.gallery-container::-webkit-scrollbar { display: none; } 
+
+.gallery-img {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    scroll-snap-align: start;
+}
+
+.room-visual::after {
+    content: '';
+    position: absolute; top:0; left:0; width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+    pointer-events: none; 
+}
+
+.room-price {
+    position: absolute;
+    bottom: 15px; left: 15px;
+    background-color: var(--accent);
+    color: var(--white);
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 4px;
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Información de la Tarjeta */
+.room-info {
+    width: 60%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.room-info h2 { color: var(--primary); font-size: 1.25rem; margin-bottom: 15px; line-height: 1.3; }
+
+.room-amenities {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.room-amenities li { font-size: 0.9rem; font-weight: 500; color: var(--text-light); }
+.room-amenities i { color: var(--accent); margin-right: 8px; width: 15px; text-align: center; }
+
+.btn-details {
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    margin-top: auto;
+}
+
+/* ==========================================================================
+   SISTEMA MODAL (VENTANA EMERGENTE)
+   ========================================================================== */
+.modal {
+    display: none; 
+    position: fixed; z-index: 2000; left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(5px);
+    overflow: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show { display: flex; align-items: center; justify-content: center; opacity: 1; padding: 20px; }
+
+.modal-content {
+    background-color: var(--white);
+    margin: auto;
+    width: 100%;
+    max-width: 650px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    transform: translateY(30px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+    max-height: 90vh; 
+    overflow-y: auto;
+}
+
+.modal.show .modal-content { transform: translateY(0); }
+
+.close-modal {
+    position: absolute; top: 15px; right: 20px;
+    color: var(--white); font-size: 1.8rem; cursor: pointer;
+    z-index: 10; text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    transition: var(--transition);
+}
+.close-modal:hover { color: var(--accent); transform: scale(1.1); }
+
+/* GALERÍA DENTRO DEL MODAL */
+.modal-image-header {
+    width: 100%; height: 320px; /* Un poco más alto para el modal */
+    background-color: var(--primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.modal-gallery-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+.modal-gallery-container::-webkit-scrollbar { display: none; }
+
+.modal-gallery-img {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    scroll-snap-align: start;
+}
+
+.scroll-hint {
+    position: absolute;
+    bottom: 15px; right: 15px;
+    background-color: rgba(28, 45, 66, 0.75);
+    color: var(--white);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    backdrop-filter: blur(4px);
+}
+
+.modal-body { padding: 30px; }
+
+.modal-header-text { margin-bottom: 25px; border-bottom: 1px solid #e2e8f0; padding-bottom: 15px; }
+.modal-header-text h2 { color: var(--primary); font-size: 1.8rem; margin-bottom: 5px; }
+.modal-price { color: var(--accent); font-weight: 700; font-size: 1.2rem; }
+
+.modal-specs {
+    display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 30px;
+}
+.spec-item {
+    background-color: var(--bg-light); padding: 10px 15px;
+    border-radius: 6px; font-size: 0.9rem; font-weight: 600; color: var(--text-dark);
+    display: flex; align-items: center; gap: 8px; border: 1px solid #e2e8f0;
+}
+.spec-item i { color: var(--accent); font-size: 1.1rem; }
+
+.modal-history-box {
+    background: linear-gradient(135deg, rgba(184, 146, 68, 0.05), rgba(184, 146, 68, 0.1));
+    border-left: 4px solid var(--accent);
+    padding: 20px; border-radius: 0 8px 8px 0; margin-bottom: 20px;
+}
+.modal-history-box h3 { color: var(--primary); font-size: 1.1rem; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+.modal-history-box p { color: var(--text-dark); font-size: 0.95rem; line-height: 1.6; font-style: italic; }
+
+.modal-services-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 30px;
+    list-style: none;
+}
+.modal-services-list li {
+    font-size: 0.85rem;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1.4;
+}
+.modal-services-list li i {
+    color: #25d366;
+    font-size: 0.85rem;
+    min-width: 15px;
+}
+
+.modal-actions .btn-primary { width: 100%; text-align: center; font-size: 1.1rem; padding: 15px; }
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .rooms-grid { grid-template-columns: 1fr; }
+    .room-card { flex-direction: column; }
+    .room-visual { width: 100%; height: 220px; }
+    .room-info { width: 100%; }
+    .modal-specs { flex-direction: column; }
+    .modal-services-list { grid-template-columns: 1fr; } 
+}
