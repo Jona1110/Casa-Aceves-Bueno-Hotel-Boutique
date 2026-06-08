@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control | Casa Boutique Aceves & Bueno</title>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="adminB&A.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>CASA BOUTIQUE ACEVES & BUENO</h2>
+                <p>Panel Administrativo</p>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="active"><i class="fas fa-calendar-alt"></i> Dashboard</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <h1>Resumen de Operaciones</h1>
+            </header>
+
+            <!-- NUEVA FILA DE MÉTRICAS -->
+            <div class="stats-grid">
+                <div class="stat-card"><span>Total Reservas</span><h3 id="statTotal">0</h3></div>
+                <div class="stat-card"><span>Pendientes</span><h3 id="statPendiente" class="text-warning">0</h3></div>
+                <div class="stat-card"><span>Confirmadas</span><h3 id="statPagado" class="text-success">0</h3></div>
+            </div>
+
+            <div class="dashboard-grid">
+                <section class="card calendar-card">
+                    <h2 class="card-title"><i class="fas fa-calendar-day"></i> Calendario de Ocupación</h2>
+                    <div id="calendar"></div>
+                </section>
+
+                <section class="card table-card">
+                    <h2 class="card-title"><i class="fas fa-list"></i> Últimas Solicitudes</h2>
+                    <div class="table-responsive">
+                        <table id="reservasTable">
+                            <!-- Cambia esta línea en tu adminB&A.html -->
+<thead>
+    <tr><th>ID</th><th>Huésped</th><th>Teléfono</th><th>Suite</th><th>Fechas</th><th>Status</th><th>Acciones</th></tr>
+</thead>
+                            <tbody id="tableBody"></tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="adminB&A.js"></script>
+</body>
+</html>
