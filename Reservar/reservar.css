@@ -1,0 +1,102 @@
+/* --- RESERVAR: ESTILO IDENTIDAD BOUTIQUE --- */
+
+.page-content {
+    padding: 120px 20px 60px 20px;
+}
+
+.contact-form-wrapper {
+    max-width: 650px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.input-group input, 
+.input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    transition: var(--transition);
+    background-color: var(--bg-light);
+}
+
+.input-group input:focus, 
+.input-group select:focus {
+    border-color: var(--accent);
+    background-color: var(--white);
+    box-shadow: 0 0 0 3px rgba(184, 146, 68, 0.1);
+    outline: none;
+}
+
+/* Caja de anticipo con identidad */
+.deposit-box {
+    background: var(--bg-light);
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px dashed var(--accent);
+    text-align: center;
+    margin: 25px 0;
+}
+
+.deposit-box label {
+    color: var(--text-light);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#depositDisplay {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent);
+    border: none;
+    background: transparent;
+    text-align: center;
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* Ajuste del botón para ser coherente con los botones globales */
+.btn-primary.w-100 {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.form-status {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .contact-form-wrapper {
+        padding: 30px 20px;
+    }
+    .date-group {
+        flex-direction: column;
+        gap: 0 !important;
+    }
+}
