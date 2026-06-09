@@ -100,3 +100,50 @@
         gap: 0 !important;
     }
 }
+
+/* --- BLOQUE DE INFORMACIÓN DE CONTACTO --- */
+.contact-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaciado uniforme entre cada línea */
+    margin-top: 15px;
+}
+
+.contact-item {
+    display: inline-flex;
+    align-items: center; /* Centra el texto con el ícono verticalmente */
+    gap: 15px;
+    color: var(--text-light, #64748b);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    line-height: 1.4;
+}
+
+/* El círculo del ícono */
+.contact-item .icon-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background-color: rgba(184, 146, 68, 0.1); /* Tu color dorado pero translúcido */
+    color: var(--accent, #b89244); /* Color del ícono */
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    flex-shrink: 0; /* Evita que el círculo se aplaste si el texto es muy largo en celulares */
+}
+
+/* EFECTOS HOVER (Solo para los enlaces, ignorando los horarios) */
+a.contact-item:hover {
+    color: var(--accent, #b89244);
+    transform: translateX(5px); /* Desplaza ligeramente el texto a la derecha */
+}
+
+a.contact-item:hover .icon-circle {
+    background-color: var(--accent, #b89244);
+    color: var(--white, #ffffff);
+    transform: scale(1.1); /* Hace el círculo un poco más grande */
+    box-shadow: 0 4px 10px rgba(184, 146, 68, 0.3);
+}
