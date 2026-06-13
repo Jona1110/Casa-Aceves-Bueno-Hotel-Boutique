@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 Quedo a la espera de sus datos bancarios para realizar el depósito.`;
 
                 // Construcción de la URL de redirección con el texto pre-cargado codificado para la API de WhatsApp
-                const waLink = `https://wa.me/523322961969?text=${encodeURIComponent(msg)}`;
+                const waLink = `https://wa.me/523351282650?text=${encodeURIComponent(msg)}`;
                 
                 // Redirección inmediata del navegador hacia WhatsApp
                 window.location.href = waLink; 
